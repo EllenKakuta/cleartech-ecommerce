@@ -1,0 +1,107 @@
+2023-04-11 00:16:36.873 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-11 00:16:39.587 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-11 00:16:39.588 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-11 00:16:39.589 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-11 00:16:39.589 -03:00 [INF] Hosting environment: Development
+2023-04-11 00:16:39.589 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-11 00:16:40.266 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-11 00:16:40.551 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 287.4429ms
+2023-04-11 00:16:40.551 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-11 00:16:40.551 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-11 00:16:40.555 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 3.1452ms
+2023-04-11 00:16:40.614 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 62.8632ms
+2023-04-11 00:16:40.677 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-11 00:16:40.787 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 109.4768ms
+2023-04-11 00:16:46.276 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/Categoria application/json 30
+2023-04-11 00:16:46.310 -03:00 [INF] Executing endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria)'
+2023-04-11 00:16:46.342 -03:00 [INF] Route matched with {action = "AdicionaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AdicionaCategoria(Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto) on controller Ellen_Falpus_CadCategoria.Controller.CategoriaController (Ellen_Falpus_CadCategoria).
+2023-04-11 00:16:46.704 -03:00 [INF] * POST ----> Requisição de inclusão de categorias através da controller 
+2023-04-11 00:16:46.707 -03:00 [INF] ----> Objeto recebido {"Nome":"testeonze","Status":true,"DataCriacao":"2023-04-11T00:16:46.6956523-03:00","$type":"CreateCategoriaDto"}
+2023-04-11 00:16:46.709 -03:00 [INF] --> Validação para inclusão de nova categoria através da service 
+2023-04-11 00:16:46.727 -03:00 [INF] -> Validação repository pesquisa categoria através do nome
+2023-04-11 00:16:47.608 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'EcommerceDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-11 00:16:48.277 -03:00 [INF] Executed DbCommand (25ms) [Parameters=[@__ToLower_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE LOWER(`c`.`Nome`) = @__ToLower_0
+LIMIT 1
+2023-04-11 00:16:48.284 -03:00 [INF] -> Validação repository adição de categoria 
+2023-04-11 00:16:48.450 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 50), @p3='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataAlteracao`, `DataCriacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1
+ AND `Id`=LAST_INSERT_ID();
+2023-04-11 00:16:48.480 -03:00 [INF] ---> Tempo para inclusão de uma nova categoria completed in 1775.3 ms
+2023-04-11 00:16:48.487 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto'.
+2023-04-11 00:16:48.522 -03:00 [INF] Executed action Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria) in 2173.9612ms
+2023-04-11 00:16:48.523 -03:00 [INF] Executed endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria)'
+2023-04-11 00:16:48.525 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/Categoria application/json 30 - 201 - application/json;+charset=utf-8 2248.5658ms
+2023-04-11 00:17:04.603 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/Categoria application/json 30
+2023-04-11 00:17:04.605 -03:00 [INF] Executing endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria)'
+2023-04-11 00:17:04.606 -03:00 [INF] Route matched with {action = "AdicionaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AdicionaCategoria(Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto) on controller Ellen_Falpus_CadCategoria.Controller.CategoriaController (Ellen_Falpus_CadCategoria).
+2023-04-11 00:17:04.607 -03:00 [INF] * POST ----> Requisição de inclusão de categorias através da controller 
+2023-04-11 00:17:04.607 -03:00 [INF] ----> Objeto recebido {"Nome":"testeonze","Status":true,"DataCriacao":"2023-04-11T00:17:04.6072627-03:00","$type":"CreateCategoriaDto"}
+2023-04-11 00:17:04.607 -03:00 [INF] --> Validação para inclusão de nova categoria através da service 
+2023-04-11 00:17:04.607 -03:00 [INF] -> Validação repository pesquisa categoria através do nome
+2023-04-11 00:17:04.638 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'EcommerceDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-11 00:17:04.641 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ToLower_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE LOWER(`c`.`Nome`) = @__ToLower_0
+LIMIT 1
+2023-04-11 00:17:04.648 -03:00 [ERR]  ****** Identificação de duplicidade de nome ****** 
+2023-04-11 00:17:04.648 -03:00 [ERR]  ****** FALHA NA INCLUSÃO DA CATEGORIA ****** 
+2023-04-11 00:17:04.648 -03:00 [INF] ---> Tempo para inclusão de uma nova categoria completed in 40.7 ms
+2023-04-11 00:17:04.648 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-04-11 00:17:04.648 -03:00 [INF] Executed action Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria) in 42.4459ms
+2023-04-11 00:17:04.648 -03:00 [INF] Executed endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria)'
+2023-04-11 00:17:04.649 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/Categoria application/json 30 - 400 - text/plain;+charset=utf-8 45.3713ms
+2023-04-11 00:17:50.456 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/Categoria - -
+2023-04-11 00:17:50.456 -03:00 [INF] Executing endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.PesquisaCategoria (Ellen_Falpus_CadCategoria)'
+2023-04-11 00:17:50.457 -03:00 [INF] Route matched with {action = "PesquisaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaCategoria(System.Nullable`1[System.Boolean], System.String, Int32, System.String) on controller Ellen_Falpus_CadCategoria.Controller.CategoriaController (Ellen_Falpus_CadCategoria).
+2023-04-11 00:17:50.460 -03:00 [INF] * GET ----> Requisição de pesquisa das categorias através da controller 
+2023-04-11 00:17:50.460 -03:00 [INF] -> Validação repository para busca de categoria
+2023-04-11 00:17:50.467 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'EcommerceDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-11 00:17:50.472 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-04-11 00:17:50.474 -03:00 [INF] -> Validação repository para filtro de categoria 
+2023-04-11 00:17:50.475 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+2023-04-11 00:17:50.475 -03:00 [INF] ---> Tempo para execução da pesquisa  completed in 15.0 ms
+2023-04-11 00:17:50.475 -03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Ellen_Falpus_CadCategoria.Modelos.Categoria, Ellen_Falpus_CadCategoria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-11 00:17:50.477 -03:00 [INF] Executed action Ellen_Falpus_CadCategoria.Controller.CategoriaController.PesquisaCategoria (Ellen_Falpus_CadCategoria) in 19.949ms
+2023-04-11 00:17:50.477 -03:00 [INF] Executed endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.PesquisaCategoria (Ellen_Falpus_CadCategoria)'
+2023-04-11 00:17:50.478 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/Categoria - - - 200 - application/json;+charset=utf-8 21.9697ms
+2023-04-11 00:18:11.881 -03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/Categoria/2 - -
+2023-04-11 00:18:11.881 -03:00 [INF] Executing endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.PesquisaCategoriaPorId (Ellen_Falpus_CadCategoria)'
+2023-04-11 00:18:11.882 -03:00 [INF] Route matched with {action = "PesquisaCategoriaPorId", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PesquisaCategoriaPorId(Int32) on controller Ellen_Falpus_CadCategoria.Controller.CategoriaController (Ellen_Falpus_CadCategoria).
+2023-04-11 00:18:11.883 -03:00 [INF] * GET ----> Requisição de pesquisa das categorias pelo ID através da controller 
+2023-04-11 00:18:11.883 -03:00 [INF] ----> Objeto recebido 2
+2023-04-11 00:18:11.883 -03:00 [INF] --> Validação para pesquisa da categoria através da service 
+2023-04-11 00:18:11.883 -03:00 [INF] -> Validação repository pesquisa categoria através do Id
+2023-04-11 00:18:11.884 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'EcommerceDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-11 00:18:11.888 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-11 00:18:11.888 -03:00 [INF] ---> Tempo para execução da pesquisa  completed in 5.4 ms
+2023-04-11 00:18:11.888 -03:00 [INF] Executing OkObjectResult, writing value of type 'Castle.Proxies.CategoriaProxy'.
+2023-04-11 00:18:11.910 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CategoriaId`, `s`.`DataAlteracao`, `s`.`DataCriacao`, `s`.`Nome`, `s`.`Status`
+FROM `Subcategorias` AS `s`
+WHERE `s`.`CategoriaId` = @__p_0
+2023-04-11 00:18:11.920 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroId`, `p`.`Comprimento`, `p`.`DataAlteracao`, `p`.`DataCriacao`, `p`.`Descricao`, `p`.`Estoque`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`CategoriaId` = @__p_0
+2023-04-11 00:18:11.923 -03:00 [INF] Executed action Ellen_Falpus_CadCategoria.Controller.CategoriaController.PesquisaCategoriaPorId (Ellen_Falpus_CadCategoria) in 40.8095ms
+2023-04-11 00:18:11.923 -03:00 [INF] Executed endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.PesquisaCategoriaPorId (Ellen_Falpus_CadCategoria)'
+2023-04-11 00:18:11.923 -03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/Categoria/2 - - - 200 - application/json;+charset=utf-8 42.3608ms

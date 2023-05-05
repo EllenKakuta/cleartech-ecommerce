@@ -1,0 +1,952 @@
+2023-04-02 14:53:42.146 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 14:53:42.618 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 14:53:42.620 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 14:53:42.621 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 14:53:42.621 -03:00 [INF] Hosting environment: Development
+2023-04-02 14:53:42.621 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 14:53:43.086 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 14:53:43.216 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 14:53:43.216 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 14:53:43.218 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 134.3083ms
+2023-04-02 14:53:43.220 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 3.9924ms
+2023-04-02 14:53:43.230 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 13.9625ms
+2023-04-02 14:53:43.328 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 14:53:43.418 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 90.0632ms
+2023-04-02 15:13:39.744 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 15:13:40.217 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 15:13:40.219 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 15:13:40.220 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 15:13:40.220 -03:00 [INF] Hosting environment: Development
+2023-04-02 15:13:40.221 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 15:13:40.715 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 15:13:40.842 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 129.1240ms
+2023-04-02 15:13:40.844 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 15:13:40.848 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 4.2287ms
+2023-04-02 15:13:40.852 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 15:13:40.862 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.9244ms
+2023-04-02 15:13:40.928 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 15:13:41.003 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 75.3342ms
+2023-04-02 15:14:47.085 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/Categoria application/json 38
+2023-04-02 15:14:47.117 -03:00 [INF] Executing endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria)'
+2023-04-02 15:14:47.148 -03:00 [INF] Route matched with {action = "AdicionaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AdicionaCategoria(Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto) on controller Ellen_Falpus_CadCategoria.Controller.CategoriaController (Ellen_Falpus_CadCategoria).
+2023-04-02 15:14:47.514 -03:00 [INF]  -----> Requisição de inclusão de uma nova categoria <----- 
+2023-04-02 15:14:48.161 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'EcommerceDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-02 15:14:48.685 -03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__ToLower_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE LOWER(`c`.`Nome`) = @__ToLower_0
+LIMIT 1
+2023-04-02 15:14:48.836 -03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (Size = 50), @p3='?' (DbType = SByte)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Categorias` (`DataAlteracao`, `DataCriacao`, `Nome`, `Status`)
+VALUES (@p0, @p1, @p2, @p3);
+SELECT `Id`
+FROM `Categorias`
+WHERE ROW_COUNT() = 1
+ AND `Id`=LAST_INSERT_ID();
+2023-04-02 15:14:48.871 -03:00 [INF] Executing CreatedAtActionResult, writing value of type 'Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto'.
+2023-04-02 15:14:48.913 -03:00 [INF] Executed action Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria) in 1759.3984ms
+2023-04-02 15:14:48.915 -03:00 [INF] Executed endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria)'
+2023-04-02 15:14:48.918 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/Categoria application/json 38 - 201 - application/json;+charset=utf-8 1833.3348ms
+2023-04-02 15:24:23.858 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 15:24:24.303 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 15:24:24.306 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 15:24:24.306 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 15:24:24.307 -03:00 [INF] Hosting environment: Development
+2023-04-02 15:24:24.308 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 15:24:24.835 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 15:24:24.946 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 15:24:24.946 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 15:24:24.947 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 114.6400ms
+2023-04-02 15:24:24.951 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 4.0127ms
+2023-04-02 15:24:24.957 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.6446ms
+2023-04-02 15:24:25.027 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 15:24:25.093 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 66.8559ms
+2023-04-02 15:24:46.823 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 15:24:47.308 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 15:24:47.311 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 15:24:47.312 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 15:24:47.312 -03:00 [INF] Hosting environment: Development
+2023-04-02 15:24:47.313 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 15:24:47.825 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 15:24:47.941 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 15:24:47.941 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 15:24:47.942 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 118.7332ms
+2023-04-02 15:24:47.945 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 3.8097ms
+2023-04-02 15:24:47.953 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.2581ms
+2023-04-02 15:24:48.019 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 15:24:48.089 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 70.0899ms
+2023-04-02 15:24:52.457 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/Categoria application/json 38
+2023-04-02 15:24:52.484 -03:00 [INF] Executing endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria)'
+2023-04-02 15:24:52.508 -03:00 [INF] Route matched with {action = "AdicionaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AdicionaCategoria(Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto) on controller Ellen_Falpus_CadCategoria.Controller.CategoriaController (Ellen_Falpus_CadCategoria).
+2023-04-02 15:24:52.700 -03:00 [INF]  -----> Requisição de inclusão de uma nova categoria <----- 
+2023-04-02 15:24:53.230 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'EcommerceDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-02 15:24:53.559 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__ToLower_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE LOWER(`c`.`Nome`) = @__ToLower_0
+LIMIT 1
+2023-04-02 15:24:53.610 -03:00 [ERR]  Falha na inclusão da nova categoria
+2023-04-02 15:24:53.616 -03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-04-02 15:24:53.621 -03:00 [INF] Executed action Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria) in 1108.4574ms
+2023-04-02 15:24:53.623 -03:00 [INF] Executed endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria)'
+2023-04-02 15:24:53.627 -03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/Categoria application/json 38 - 400 - text/plain;+charset=utf-8 1169.7879ms
+2023-04-02 15:50:32.715 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 15:51:07.033 -03:00 [INF] Application is shutting down...
+2023-04-02 15:51:17.535 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 15:51:17.936 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 15:51:17.937 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 15:51:17.938 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 15:51:17.938 -03:00 [INF] Hosting environment: Development
+2023-04-02 15:51:17.938 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 15:51:18.116 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 15:51:18.228 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 114.2509ms
+2023-04-02 15:51:18.229 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 15:51:18.231 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.7207ms
+2023-04-02 15:51:18.231 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 15:51:18.243 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.2434ms
+2023-04-02 15:51:18.313 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 15:51:18.378 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 65.1419ms
+2023-04-02 16:21:48.397 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 16:21:48.701 -03:00 [DBG] Hosting starting
+2023-04-02 16:21:48.821 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DBF4B5C4064A45A62BC6B8824C11063FAF204518)
+2023-04-02 16:21:48.846 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 16:21:48.846 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 16:21:48.846 -03:00 [DBG] Loaded hosting startup assembly Ellen_Falpus_CadCategoria
+2023-04-02 16:21:48.846 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 16:21:48.846 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 16:21:48.847 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 16:21:48.847 -03:00 [INF] Hosting environment: Development
+2023-04-02 16:21:48.847 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 16:21:48.847 -03:00 [DBG] Hosting started
+2023-04-02 16:21:49.104 -03:00 [DBG] Connection id "0HMPJLU0QQD0E" accepted.
+2023-04-02 16:21:49.105 -03:00 [DBG] Connection id "0HMPJLU0QQD0E" started.
+2023-04-02 16:21:49.165 -03:00 [DBG] Connection "0HMPJLU0QQD0E" established using the following protocol: "Tls12"
+2023-04-02 16:21:49.206 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:21:49.228 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 16:21:49.289 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 16:21:49.340 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 16:21:49.343 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:21:49.343 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:21:49.343 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 139.7902ms
+2023-04-02 16:21:49.346 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.6984ms
+2023-04-02 16:21:49.353 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.7827ms
+2023-04-02 16:21:49.439 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:21:49.515 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 75.6176ms
+2023-04-02 16:23:51.119 -03:00 [DBG] Connection id "0HMPJLU0QQD0E" is closing.
+2023-04-02 16:23:51.136 -03:00 [DBG] Connection id "0HMPJLU0QQD0E" is closed. The last processed stream ID was 7.
+2023-04-02 16:23:51.138 -03:00 [DBG] Connection id "0HMPJLU0QQD0E" received FIN.
+2023-04-02 16:23:51.141 -03:00 [DBG] Connection id "0HMPJLU0QQD0E" sending FIN because: "The client closed the connection."
+2023-04-02 16:23:51.150 -03:00 [DBG] Connection id "0HMPJLU0QQD0E" stopped.
+2023-04-02 16:25:46.479 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 16:25:46.726 -03:00 [DBG] Hosting starting
+2023-04-02 16:25:46.832 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DBF4B5C4064A45A62BC6B8824C11063FAF204518)
+2023-04-02 16:25:46.854 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 16:25:46.854 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 16:25:46.855 -03:00 [DBG] Loaded hosting startup assembly Ellen_Falpus_CadCategoria
+2023-04-02 16:25:46.855 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 16:25:46.855 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 16:25:46.855 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 16:25:46.855 -03:00 [INF] Hosting environment: Development
+2023-04-02 16:25:46.855 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 16:25:46.855 -03:00 [DBG] Hosting started
+2023-04-02 16:25:47.262 -03:00 [DBG] Connection id "0HMPJM07Q2UN6" accepted.
+2023-04-02 16:25:47.262 -03:00 [DBG] Connection id "0HMPJM07Q2UN7" accepted.
+2023-04-02 16:25:47.263 -03:00 [DBG] Connection id "0HMPJM07Q2UN6" started.
+2023-04-02 16:25:47.263 -03:00 [DBG] Connection id "0HMPJM07Q2UN7" started.
+2023-04-02 16:25:47.282 -03:00 [DBG] Connection id "0HMPJM07Q2UN6" received FIN.
+2023-04-02 16:25:47.282 -03:00 [DBG] Connection id "0HMPJM07Q2UN7" received FIN.
+2023-04-02 16:25:47.286 -03:00 [DBG] Connection id "0HMPJM07Q2UN8" accepted.
+2023-04-02 16:25:47.286 -03:00 [DBG] Connection id "0HMPJM07Q2UN8" started.
+2023-04-02 16:25:47.291 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:25:47.291 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:25:47.297 -03:00 [DBG] Connection id "0HMPJM07Q2UN6" stopped.
+2023-04-02 16:25:47.297 -03:00 [DBG] Connection id "0HMPJM07Q2UN7" stopped.
+2023-04-02 16:25:47.298 -03:00 [DBG] Connection id "0HMPJM07Q2UN6" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:25:47.298 -03:00 [DBG] Connection id "0HMPJM07Q2UN7" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:25:47.331 -03:00 [DBG] Connection "0HMPJM07Q2UN8" established using the following protocol: "Tls12"
+2023-04-02 16:25:47.356 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:25:47.369 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 16:25:47.423 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 16:25:47.471 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 16:25:47.474 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:25:47.474 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:25:47.475 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 120.8439ms
+2023-04-02 16:25:47.480 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 6.4180ms
+2023-04-02 16:25:47.499 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.4160ms
+2023-04-02 16:25:47.578 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:25:47.641 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 62.1184ms
+2023-04-02 16:26:12.992 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 16:26:13.266 -03:00 [DBG] Hosting starting
+2023-04-02 16:26:13.393 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DBF4B5C4064A45A62BC6B8824C11063FAF204518)
+2023-04-02 16:26:13.418 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 16:26:13.418 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 16:26:13.418 -03:00 [DBG] Loaded hosting startup assembly Ellen_Falpus_CadCategoria
+2023-04-02 16:26:13.418 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 16:26:13.418 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 16:26:13.418 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 16:26:13.418 -03:00 [INF] Hosting environment: Development
+2023-04-02 16:26:13.418 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 16:26:13.418 -03:00 [DBG] Hosting started
+2023-04-02 16:26:13.785 -03:00 [DBG] Connection id "0HMPJM0FMVUU8" accepted.
+2023-04-02 16:26:13.786 -03:00 [DBG] Connection id "0HMPJM0FMVUU8" started.
+2023-04-02 16:26:13.786 -03:00 [DBG] Connection id "0HMPJM0FMVUU9" accepted.
+2023-04-02 16:26:13.786 -03:00 [DBG] Connection id "0HMPJM0FMVUU9" started.
+2023-04-02 16:26:13.795 -03:00 [DBG] Connection id "0HMPJM0FMVUU8" received FIN.
+2023-04-02 16:26:13.795 -03:00 [DBG] Connection id "0HMPJM0FMVUU9" received FIN.
+2023-04-02 16:26:13.798 -03:00 [DBG] Connection id "0HMPJM0FMVUUA" accepted.
+2023-04-02 16:26:13.798 -03:00 [DBG] Connection id "0HMPJM0FMVUUA" started.
+2023-04-02 16:26:13.802 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:26:13.802 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:26:13.805 -03:00 [DBG] Connection id "0HMPJM0FMVUU8" stopped.
+2023-04-02 16:26:13.805 -03:00 [DBG] Connection id "0HMPJM0FMVUU9" stopped.
+2023-04-02 16:26:13.806 -03:00 [DBG] Connection id "0HMPJM0FMVUU8" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:26:13.806 -03:00 [DBG] Connection id "0HMPJM0FMVUU9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:26:13.827 -03:00 [DBG] Connection "0HMPJM0FMVUUA" established using the following protocol: "Tls12"
+2023-04-02 16:26:13.851 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:26:13.865 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 16:26:13.916 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 16:26:13.961 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 16:26:13.963 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:26:13.963 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:26:13.963 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 114.6033ms
+2023-04-02 16:26:13.965 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.0629ms
+2023-04-02 16:26:13.972 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.7197ms
+2023-04-02 16:26:14.049 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:26:14.124 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 74.8914ms
+2023-04-02 16:26:23.246 -03:00 [INF] Application is shutting down...
+2023-04-02 16:26:23.247 -03:00 [DBG] Hosting stopping
+2023-04-02 16:26:23.252 -03:00 [DBG] Connection id "0HMPJM0FMVUUA" is closing.
+2023-04-02 16:26:23.256 -03:00 [DBG] Connection id "0HMPJM0FMVUUA" is closed. The last processed stream ID was 7.
+2023-04-02 16:26:23.256 -03:00 [DBG] Connection id "0HMPJM0FMVUUA" received FIN.
+2023-04-02 16:26:23.256 -03:00 [DBG] Connection id "0HMPJM0FMVUUA" sending FIN because: "The client closed the connection."
+2023-04-02 16:26:23.258 -03:00 [DBG] Connection id "0HMPJM0FMVUUA" stopped.
+2023-04-02 16:26:23.259 -03:00 [DBG] Hosting stopped
+2023-04-02 16:26:25.148 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 16:26:25.388 -03:00 [DBG] Hosting starting
+2023-04-02 16:26:25.505 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DBF4B5C4064A45A62BC6B8824C11063FAF204518)
+2023-04-02 16:26:25.528 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 16:26:25.528 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 16:26:25.528 -03:00 [DBG] Loaded hosting startup assembly Ellen_Falpus_CadCategoria
+2023-04-02 16:26:25.528 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 16:26:25.528 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 16:26:25.529 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 16:26:25.529 -03:00 [INF] Hosting environment: Development
+2023-04-02 16:26:25.529 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 16:26:25.529 -03:00 [DBG] Hosting started
+2023-04-02 16:26:26.029 -03:00 [DBG] Connection id "0HMPJM0JBOMB9" accepted.
+2023-04-02 16:26:26.029 -03:00 [DBG] Connection id "0HMPJM0JBOMBA" accepted.
+2023-04-02 16:26:26.030 -03:00 [DBG] Connection id "0HMPJM0JBOMB9" started.
+2023-04-02 16:26:26.030 -03:00 [DBG] Connection id "0HMPJM0JBOMBA" started.
+2023-04-02 16:26:26.040 -03:00 [DBG] Connection id "0HMPJM0JBOMB9" received FIN.
+2023-04-02 16:26:26.040 -03:00 [DBG] Connection id "0HMPJM0JBOMBA" received FIN.
+2023-04-02 16:26:26.043 -03:00 [DBG] Connection id "0HMPJM0JBOMBB" accepted.
+2023-04-02 16:26:26.043 -03:00 [DBG] Connection id "0HMPJM0JBOMBB" started.
+2023-04-02 16:26:26.047 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:26:26.047 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:26:26.050 -03:00 [DBG] Connection id "0HMPJM0JBOMBA" stopped.
+2023-04-02 16:26:26.050 -03:00 [DBG] Connection id "0HMPJM0JBOMB9" stopped.
+2023-04-02 16:26:26.051 -03:00 [DBG] Connection id "0HMPJM0JBOMB9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:26:26.051 -03:00 [DBG] Connection id "0HMPJM0JBOMBA" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:26:26.072 -03:00 [DBG] Connection "0HMPJM0JBOMBB" established using the following protocol: "Tls12"
+2023-04-02 16:26:26.097 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:26:26.112 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 16:26:26.167 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 16:26:26.225 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 16:26:26.226 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:26:26.226 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:26:26.228 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 132.8831ms
+2023-04-02 16:26:26.230 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 3.4030ms
+2023-04-02 16:26:26.238 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.8515ms
+2023-04-02 16:26:26.315 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:26:26.403 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 88.5865ms
+2023-04-02 16:28:27.713 -03:00 [DBG] Connection id "0HMPJM0JBOMBB" is closing.
+2023-04-02 16:28:27.728 -03:00 [DBG] Connection id "0HMPJM0JBOMBB" is closed. The last processed stream ID was 7.
+2023-04-02 16:28:27.729 -03:00 [DBG] Connection id "0HMPJM0JBOMBB" received FIN.
+2023-04-02 16:28:27.729 -03:00 [DBG] Connection id "0HMPJM0JBOMBB" sending FIN because: "The client closed the connection."
+2023-04-02 16:28:27.731 -03:00 [DBG] Connection id "0HMPJM0JBOMBB" stopped.
+2023-04-02 16:29:33.837 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 16:29:34.079 -03:00 [DBG] Hosting starting
+2023-04-02 16:29:34.184 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DBF4B5C4064A45A62BC6B8824C11063FAF204518)
+2023-04-02 16:29:34.209 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 16:29:34.209 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 16:29:34.209 -03:00 [DBG] Loaded hosting startup assembly Ellen_Falpus_CadCategoria
+2023-04-02 16:29:34.209 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 16:29:34.209 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 16:29:34.210 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 16:29:34.210 -03:00 [INF] Hosting environment: Development
+2023-04-02 16:29:34.210 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 16:29:34.210 -03:00 [DBG] Hosting started
+2023-04-02 16:29:34.630 -03:00 [DBG] Connection id "0HMPJM2BID4S0" accepted.
+2023-04-02 16:29:34.631 -03:00 [DBG] Connection id "0HMPJM2BID4S0" started.
+2023-04-02 16:29:34.674 -03:00 [DBG] Connection "0HMPJM2BID4S0" established using the following protocol: "Tls12"
+2023-04-02 16:29:34.702 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:29:34.719 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 16:29:34.784 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 16:29:34.837 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 16:29:34.838 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:29:34.838 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:29:34.840 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 140.7902ms
+2023-04-02 16:29:34.841 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.9239ms
+2023-04-02 16:29:34.850 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.2730ms
+2023-04-02 16:29:34.941 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:29:35.008 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 67.0658ms
+2023-04-02 16:29:41.442 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 16:29:41.699 -03:00 [DBG] Hosting starting
+2023-04-02 16:29:41.807 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DBF4B5C4064A45A62BC6B8824C11063FAF204518)
+2023-04-02 16:29:41.828 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 16:29:41.828 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 16:29:41.828 -03:00 [DBG] Loaded hosting startup assembly Ellen_Falpus_CadCategoria
+2023-04-02 16:29:41.828 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 16:29:41.829 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 16:29:41.829 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 16:29:41.829 -03:00 [INF] Hosting environment: Development
+2023-04-02 16:29:41.829 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 16:29:41.829 -03:00 [DBG] Hosting started
+2023-04-02 16:29:42.180 -03:00 [DBG] Connection id "0HMPJM2DQE86R" accepted.
+2023-04-02 16:29:42.181 -03:00 [DBG] Connection id "0HMPJM2DQE86R" started.
+2023-04-02 16:29:42.198 -03:00 [DBG] Connection id "0HMPJM2DQE86S" accepted.
+2023-04-02 16:29:42.198 -03:00 [DBG] Connection id "0HMPJM2DQE86S" started.
+2023-04-02 16:29:42.216 -03:00 [DBG] Connection id "0HMPJM2DQE86S" received FIN.
+2023-04-02 16:29:42.216 -03:00 [DBG] Connection id "0HMPJM2DQE86R" received FIN.
+2023-04-02 16:29:42.218 -03:00 [DBG] Connection id "0HMPJM2DQE86T" accepted.
+2023-04-02 16:29:42.218 -03:00 [DBG] Connection id "0HMPJM2DQE86T" started.
+2023-04-02 16:29:42.222 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:29:42.222 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:29:42.226 -03:00 [DBG] Connection id "0HMPJM2DQE86R" stopped.
+2023-04-02 16:29:42.226 -03:00 [DBG] Connection id "0HMPJM2DQE86S" stopped.
+2023-04-02 16:29:42.227 -03:00 [DBG] Connection id "0HMPJM2DQE86R" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:29:42.227 -03:00 [DBG] Connection id "0HMPJM2DQE86S" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:29:42.249 -03:00 [DBG] Connection "0HMPJM2DQE86T" established using the following protocol: "Tls12"
+2023-04-02 16:29:42.278 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:29:42.293 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 16:29:42.355 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 16:29:42.404 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 16:29:42.405 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:29:42.405 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:29:42.407 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 131.0257ms
+2023-04-02 16:29:42.408 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.8444ms
+2023-04-02 16:29:42.415 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.8745ms
+2023-04-02 16:29:42.488 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:29:42.562 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 74.0837ms
+2023-04-02 16:31:44.048 -03:00 [DBG] Connection id "0HMPJM2DQE86T" is closing.
+2023-04-02 16:31:44.053 -03:00 [DBG] Connection id "0HMPJM2DQE86T" is closed. The last processed stream ID was 7.
+2023-04-02 16:31:44.054 -03:00 [DBG] Connection id "0HMPJM2DQE86T" received FIN.
+2023-04-02 16:31:44.054 -03:00 [DBG] Connection id "0HMPJM2DQE86T" sending FIN because: "The client closed the connection."
+2023-04-02 16:31:44.055 -03:00 [DBG] Connection id "0HMPJM2DQE86T" stopped.
+2023-04-02 16:35:46.494 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 16:35:46.822 -03:00 [DBG] Hosting starting
+2023-04-02 16:35:46.937 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DBF4B5C4064A45A62BC6B8824C11063FAF204518)
+2023-04-02 16:35:46.959 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 16:35:46.959 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 16:35:46.959 -03:00 [DBG] Loaded hosting startup assembly Ellen_Falpus_CadCategoria
+2023-04-02 16:35:46.959 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 16:35:46.959 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 16:35:46.959 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 16:35:46.959 -03:00 [INF] Hosting environment: Development
+2023-04-02 16:35:46.960 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 16:35:46.960 -03:00 [DBG] Hosting started
+2023-04-02 16:35:47.254 -03:00 [DBG] Connection id "0HMPJM5QK1DKD" accepted.
+2023-04-02 16:35:47.254 -03:00 [DBG] Connection id "0HMPJM5QK1DKE" accepted.
+2023-04-02 16:35:47.254 -03:00 [DBG] Connection id "0HMPJM5QK1DKE" started.
+2023-04-02 16:35:47.254 -03:00 [DBG] Connection id "0HMPJM5QK1DKD" started.
+2023-04-02 16:35:47.284 -03:00 [DBG] Connection id "0HMPJM5QK1DKD" received FIN.
+2023-04-02 16:35:47.284 -03:00 [DBG] Connection id "0HMPJM5QK1DKE" received FIN.
+2023-04-02 16:35:47.287 -03:00 [DBG] Connection id "0HMPJM5QK1DKF" accepted.
+2023-04-02 16:35:47.287 -03:00 [DBG] Connection id "0HMPJM5QK1DKF" started.
+2023-04-02 16:35:47.290 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:35:47.290 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:35:47.294 -03:00 [DBG] Connection id "0HMPJM5QK1DKD" stopped.
+2023-04-02 16:35:47.294 -03:00 [DBG] Connection id "0HMPJM5QK1DKE" stopped.
+2023-04-02 16:35:47.295 -03:00 [DBG] Connection id "0HMPJM5QK1DKE" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:35:47.295 -03:00 [DBG] Connection id "0HMPJM5QK1DKD" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:35:47.318 -03:00 [DBG] Connection "0HMPJM5QK1DKF" established using the following protocol: "Tls12"
+2023-04-02 16:35:47.345 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:35:47.358 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 16:35:47.414 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 16:35:47.460 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 16:35:47.462 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:35:47.462 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:35:47.462 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 119.8348ms
+2023-04-02 16:35:47.465 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.8241ms
+2023-04-02 16:35:47.472 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.0128ms
+2023-04-02 16:35:47.549 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:35:47.625 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 75.7639ms
+2023-04-02 16:37:49.144 -03:00 [DBG] Connection id "0HMPJM5QK1DKF" is closing.
+2023-04-02 16:37:49.166 -03:00 [DBG] Connection id "0HMPJM5QK1DKF" is closed. The last processed stream ID was 7.
+2023-04-02 16:37:49.167 -03:00 [DBG] Connection id "0HMPJM5QK1DKF" received FIN.
+2023-04-02 16:37:49.167 -03:00 [DBG] Connection id "0HMPJM5QK1DKF" sending FIN because: "The client closed the connection."
+2023-04-02 16:37:49.169 -03:00 [DBG] Connection id "0HMPJM5QK1DKF" stopped.
+2023-04-02 16:38:54.531 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 16:38:54.771 -03:00 [DBG] Hosting starting
+2023-04-02 16:38:54.879 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DBF4B5C4064A45A62BC6B8824C11063FAF204518)
+2023-04-02 16:38:54.902 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 16:38:54.902 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 16:38:54.902 -03:00 [DBG] Loaded hosting startup assembly Ellen_Falpus_CadCategoria
+2023-04-02 16:38:54.902 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 16:38:54.902 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 16:38:54.903 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 16:38:54.903 -03:00 [INF] Hosting environment: Development
+2023-04-02 16:38:54.903 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 16:38:54.903 -03:00 [DBG] Hosting started
+2023-04-02 16:38:55.305 -03:00 [DBG] Connection id "0HMPJM7ILEAKC" accepted.
+2023-04-02 16:38:55.305 -03:00 [DBG] Connection id "0HMPJM7ILEAKB" accepted.
+2023-04-02 16:38:55.305 -03:00 [DBG] Connection id "0HMPJM7ILEAKC" started.
+2023-04-02 16:38:55.305 -03:00 [DBG] Connection id "0HMPJM7ILEAKB" started.
+2023-04-02 16:38:55.323 -03:00 [DBG] Connection id "0HMPJM7ILEAKB" received FIN.
+2023-04-02 16:38:55.323 -03:00 [DBG] Connection id "0HMPJM7ILEAKC" received FIN.
+2023-04-02 16:38:55.325 -03:00 [DBG] Connection id "0HMPJM7ILEAKD" accepted.
+2023-04-02 16:38:55.325 -03:00 [DBG] Connection id "0HMPJM7ILEAKD" started.
+2023-04-02 16:38:55.330 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:38:55.330 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:38:55.335 -03:00 [DBG] Connection id "0HMPJM7ILEAKB" stopped.
+2023-04-02 16:38:55.335 -03:00 [DBG] Connection id "0HMPJM7ILEAKC" stopped.
+2023-04-02 16:38:55.336 -03:00 [DBG] Connection id "0HMPJM7ILEAKB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:38:55.336 -03:00 [DBG] Connection id "0HMPJM7ILEAKC" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:38:55.362 -03:00 [DBG] Connection "0HMPJM7ILEAKD" established using the following protocol: "Tls12"
+2023-04-02 16:38:55.391 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:38:55.405 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 16:38:55.498 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 16:38:55.551 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 16:38:55.551 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:38:55.551 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:38:55.553 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 164.9949ms
+2023-04-02 16:38:55.555 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 3.2997ms
+2023-04-02 16:38:55.562 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.2053ms
+2023-04-02 16:38:55.655 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:38:55.737 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 82.0655ms
+2023-04-02 16:39:39.448 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 16:39:39.689 -03:00 [DBG] Hosting starting
+2023-04-02 16:39:39.797 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DBF4B5C4064A45A62BC6B8824C11063FAF204518)
+2023-04-02 16:39:39.819 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 16:39:39.819 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 16:39:39.820 -03:00 [DBG] Loaded hosting startup assembly Ellen_Falpus_CadCategoria
+2023-04-02 16:39:39.820 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 16:39:39.820 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 16:39:39.820 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 16:39:39.820 -03:00 [INF] Hosting environment: Development
+2023-04-02 16:39:39.820 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 16:39:39.820 -03:00 [DBG] Hosting started
+2023-04-02 16:39:40.207 -03:00 [DBG] Connection id "0HMPJM801LM9R" accepted.
+2023-04-02 16:39:40.208 -03:00 [DBG] Connection id "0HMPJM801LM9R" started.
+2023-04-02 16:39:40.247 -03:00 [DBG] Connection "0HMPJM801LM9R" established using the following protocol: "Tls12"
+2023-04-02 16:39:40.276 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:39:40.292 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 16:39:40.345 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 16:39:40.391 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 16:39:40.394 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 120.4862ms
+2023-04-02 16:39:40.394 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:39:40.394 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:39:40.396 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.1534ms
+2023-04-02 16:39:40.403 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.1342ms
+2023-04-02 16:39:40.478 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:39:40.550 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 72.0352ms
+2023-04-02 16:39:43.266 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 16:39:43.509 -03:00 [DBG] Hosting starting
+2023-04-02 16:39:43.627 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DBF4B5C4064A45A62BC6B8824C11063FAF204518)
+2023-04-02 16:39:43.650 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 16:39:43.650 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 16:39:43.651 -03:00 [DBG] Loaded hosting startup assembly Ellen_Falpus_CadCategoria
+2023-04-02 16:39:43.651 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 16:39:43.651 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 16:39:43.651 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 16:39:43.651 -03:00 [INF] Hosting environment: Development
+2023-04-02 16:39:43.651 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 16:39:43.651 -03:00 [DBG] Hosting started
+2023-04-02 16:39:44.065 -03:00 [DBG] Connection id "0HMPJM816EEK1" received FIN.
+2023-04-02 16:39:44.065 -03:00 [DBG] Connection id "0HMPJM816EEK1" accepted.
+2023-04-02 16:39:44.065 -03:00 [DBG] Connection id "0HMPJM816EEK0" received FIN.
+2023-04-02 16:39:44.065 -03:00 [DBG] Connection id "0HMPJM816EEK0" accepted.
+2023-04-02 16:39:44.065 -03:00 [DBG] Connection id "0HMPJM816EEK0" started.
+2023-04-02 16:39:44.065 -03:00 [DBG] Connection id "0HMPJM816EEK1" started.
+2023-04-02 16:39:44.066 -03:00 [DBG] Connection id "0HMPJM816EEK2" accepted.
+2023-04-02 16:39:44.066 -03:00 [DBG] Connection id "0HMPJM816EEK2" started.
+2023-04-02 16:39:44.079 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:39:44.079 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:39:44.083 -03:00 [DBG] Connection id "0HMPJM816EEK1" stopped.
+2023-04-02 16:39:44.083 -03:00 [DBG] Connection id "0HMPJM816EEK0" stopped.
+2023-04-02 16:39:44.084 -03:00 [DBG] Connection id "0HMPJM816EEK1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:39:44.084 -03:00 [DBG] Connection id "0HMPJM816EEK0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:39:44.106 -03:00 [DBG] Connection "0HMPJM816EEK2" established using the following protocol: "Tls12"
+2023-04-02 16:39:44.131 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:39:44.145 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 16:39:44.201 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 16:39:44.255 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 16:39:44.257 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:39:44.257 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:39:44.257 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 128.3991ms
+2023-04-02 16:39:44.260 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.8092ms
+2023-04-02 16:39:44.267 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.3010ms
+2023-04-02 16:39:44.345 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:39:44.421 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 76.2626ms
+2023-04-02 16:39:58.255 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 16:39:58.541 -03:00 [DBG] Hosting starting
+2023-04-02 16:39:58.657 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DBF4B5C4064A45A62BC6B8824C11063FAF204518)
+2023-04-02 16:39:58.681 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 16:39:58.681 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 16:39:58.682 -03:00 [DBG] Loaded hosting startup assembly Ellen_Falpus_CadCategoria
+2023-04-02 16:39:58.682 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 16:39:58.682 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 16:39:58.682 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 16:39:58.682 -03:00 [INF] Hosting environment: Development
+2023-04-02 16:39:58.682 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 16:39:58.682 -03:00 [DBG] Hosting started
+2023-04-02 16:39:58.966 -03:00 [DBG] Connection id "0HMPJM85KI025" accepted.
+2023-04-02 16:39:58.966 -03:00 [DBG] Connection id "0HMPJM85KI026" accepted.
+2023-04-02 16:39:58.966 -03:00 [DBG] Connection id "0HMPJM85KI025" started.
+2023-04-02 16:39:58.966 -03:00 [DBG] Connection id "0HMPJM85KI026" started.
+2023-04-02 16:39:58.983 -03:00 [DBG] Connection id "0HMPJM85KI025" received FIN.
+2023-04-02 16:39:58.983 -03:00 [DBG] Connection id "0HMPJM85KI026" received FIN.
+2023-04-02 16:39:58.985 -03:00 [DBG] Connection id "0HMPJM85KI027" accepted.
+2023-04-02 16:39:58.985 -03:00 [DBG] Connection id "0HMPJM85KI027" started.
+2023-04-02 16:39:58.989 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:39:58.989 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:39:58.993 -03:00 [DBG] Connection id "0HMPJM85KI025" stopped.
+2023-04-02 16:39:58.993 -03:00 [DBG] Connection id "0HMPJM85KI026" stopped.
+2023-04-02 16:39:58.994 -03:00 [DBG] Connection id "0HMPJM85KI025" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:39:58.994 -03:00 [DBG] Connection id "0HMPJM85KI026" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:39:59.048 -03:00 [DBG] Connection "0HMPJM85KI027" established using the following protocol: "Tls12"
+2023-04-02 16:39:59.097 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:39:59.114 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 16:39:59.176 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 16:39:59.225 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 16:39:59.226 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:39:59.226 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:39:59.227 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 132.9516ms
+2023-04-02 16:39:59.229 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.4091ms
+2023-04-02 16:39:59.237 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.1287ms
+2023-04-02 16:39:59.306 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:39:59.403 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 96.6443ms
+2023-04-02 16:42:00.769 -03:00 [DBG] Connection id "0HMPJM85KI027" is closing.
+2023-04-02 16:42:00.784 -03:00 [DBG] Connection id "0HMPJM85KI027" is closed. The last processed stream ID was 7.
+2023-04-02 16:42:00.786 -03:00 [DBG] Connection id "0HMPJM85KI027" received FIN.
+2023-04-02 16:42:00.786 -03:00 [DBG] Connection id "0HMPJM85KI027" sending FIN because: "The client closed the connection."
+2023-04-02 16:42:00.789 -03:00 [DBG] Connection id "0HMPJM85KI027" stopped.
+2023-04-02 16:42:41.910 -03:00 [INF] Application is shutting down...
+2023-04-02 16:42:41.911 -03:00 [DBG] Hosting stopping
+2023-04-02 16:42:41.919 -03:00 [DBG] Hosting stopped
+2023-04-02 16:43:37.671 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 16:43:37.941 -03:00 [DBG] Hosting starting
+2023-04-02 16:43:38.104 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DBF4B5C4064A45A62BC6B8824C11063FAF204518)
+2023-04-02 16:43:38.137 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 16:43:38.137 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 16:43:38.138 -03:00 [DBG] Loaded hosting startup assembly Ellen_Falpus_CadCategoria
+2023-04-02 16:43:38.138 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 16:43:38.138 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 16:43:38.138 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 16:43:38.138 -03:00 [INF] Hosting environment: Development
+2023-04-02 16:43:38.138 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 16:43:38.138 -03:00 [DBG] Hosting started
+2023-04-02 16:43:38.499 -03:00 [DBG] Connection id "0HMPJMA727FV7" reset.
+2023-04-02 16:43:38.499 -03:00 [DBG] Connection id "0HMPJMA727FV6" received FIN.
+2023-04-02 16:43:38.507 -03:00 [DBG] Connection id "0HMPJMA727FV6" accepted.
+2023-04-02 16:43:38.507 -03:00 [DBG] Connection id "0HMPJMA727FV7" accepted.
+2023-04-02 16:43:38.507 -03:00 [DBG] Connection id "0HMPJMA727FV6" started.
+2023-04-02 16:43:38.507 -03:00 [DBG] Connection id "0HMPJMA727FV7" started.
+2023-04-02 16:43:38.520 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:43:38.520 -03:00 [DBG] Failed to authenticate HTTPS connection.
+Microsoft.AspNetCore.Connections.ConnectionResetException: Foi forçado o cancelamento de uma conexão existente pelo host remoto.
+ ---> System.Net.Sockets.SocketException (10054): Foi forçado o cancelamento de uma conexão existente pelo host remoto.
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.<GetResult>g__ThrowSocketException|7_0(SocketError e)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketAwaitableEventArgs.GetResult()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.ProcessReceives()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.Internal.SocketConnection.DoReceive()
+   --- End of inner exception stack trace ---
+   at System.IO.Pipelines.PipeCompletion.ThrowLatchedException()
+   at System.IO.Pipelines.Pipe.GetReadResult(ReadResult& result)
+   at System.IO.Pipelines.Pipe.ReadAsync(CancellationToken token)
+   at System.IO.Pipelines.Pipe.DefaultPipeReader.ReadAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.DuplexPipeStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:43:38.525 -03:00 [DBG] Connection id "0HMPJMA727FV7" stopped.
+2023-04-02 16:43:38.525 -03:00 [DBG] Connection id "0HMPJMA727FV6" stopped.
+2023-04-02 16:43:38.527 -03:00 [DBG] Connection id "0HMPJMA727FV7" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:43:38.527 -03:00 [DBG] Connection id "0HMPJMA727FV6" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:43:38.795 -03:00 [DBG] Connection id "0HMPJMA727FV8" accepted.
+2023-04-02 16:43:38.795 -03:00 [DBG] Connection id "0HMPJMA727FV8" started.
+2023-04-02 16:43:38.828 -03:00 [DBG] Connection "0HMPJMA727FV8" established using the following protocol: "Tls12"
+2023-04-02 16:43:38.857 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:43:38.871 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 16:43:38.937 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 16:43:38.989 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 16:43:38.991 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:43:38.991 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:43:38.991 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 136.3461ms
+2023-04-02 16:43:38.993 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.8310ms
+2023-04-02 16:43:39.000 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.5854ms
+2023-04-02 16:43:39.103 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:43:39.172 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 69.0332ms
+2023-04-02 16:45:41.366 -03:00 [DBG] Connection id "0HMPJMA727FV8" is closing.
+2023-04-02 16:45:41.372 -03:00 [DBG] Connection id "0HMPJMA727FV8" is closed. The last processed stream ID was 7.
+2023-04-02 16:45:41.372 -03:00 [DBG] Connection id "0HMPJMA727FV8" received FIN.
+2023-04-02 16:45:41.373 -03:00 [DBG] Connection id "0HMPJMA727FV8" sending FIN because: "The client closed the connection."
+2023-04-02 16:45:41.374 -03:00 [DBG] Connection id "0HMPJMA727FV8" stopped.
+2023-04-02 16:45:42.166 -03:00 [DBG] Connection id "0HMPJMA727FV9" received FIN.
+2023-04-02 16:45:42.166 -03:00 [DBG] Connection id "0HMPJMA727FV9" accepted.
+2023-04-02 16:45:42.166 -03:00 [DBG] Connection id "0HMPJMA727FV9" started.
+2023-04-02 16:45:42.166 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 16:45:42.166 -03:00 [DBG] Connection id "0HMPJMA727FV9" stopped.
+2023-04-02 16:45:42.166 -03:00 [DBG] Connection id "0HMPJMA727FV9" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 16:45:42.196 -03:00 [DBG] Connection id "0HMPJMA727FVA" accepted.
+2023-04-02 16:45:42.196 -03:00 [DBG] Connection id "0HMPJMA727FVA" started.
+2023-04-02 16:45:42.198 -03:00 [DBG] Connection "0HMPJMA727FVA" established using the following protocol: "Tls12"
+2023-04-02 16:45:42.198 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:45:42.200 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 16:45:42.204 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 16:45:42.204 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 5.6010ms
+2023-04-02 16:45:42.215 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:45:42.215 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:45:42.216 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 0.4906ms
+2023-04-02 16:45:42.229 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 13.5877ms
+2023-04-02 16:45:42.307 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:45:42.315 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 8.2236ms
+2023-04-02 16:46:03.357 -03:00 [INF] Application is shutting down...
+2023-04-02 16:46:03.358 -03:00 [DBG] Hosting stopping
+2023-04-02 16:46:03.365 -03:00 [DBG] Connection id "0HMPJMA727FVA" is closing.
+2023-04-02 16:46:03.365 -03:00 [DBG] Connection id "0HMPJMA727FVA" is closed. The last processed stream ID was 7.
+2023-04-02 16:46:03.366 -03:00 [DBG] Connection id "0HMPJMA727FVA" received FIN.
+2023-04-02 16:46:03.366 -03:00 [DBG] Connection id "0HMPJMA727FVA" sending FIN because: "The client closed the connection."
+2023-04-02 16:46:03.376 -03:00 [DBG] Connection id "0HMPJMA727FVA" stopped.
+2023-04-02 16:46:03.378 -03:00 [DBG] Hosting stopped
+2023-04-02 16:46:48.752 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 16:46:49.148 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 16:46:49.149 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 16:46:49.149 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 16:46:49.149 -03:00 [INF] Hosting environment: Development
+2023-04-02 16:46:49.150 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 16:46:49.689 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:46:49.817 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 129.4694ms
+2023-04-02 16:46:49.817 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:46:49.817 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:46:49.820 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 3.0330ms
+2023-04-02 16:46:49.827 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.3685ms
+2023-04-02 16:46:49.909 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:46:50.009 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 100.2251ms
+2023-04-02 16:55:25.861 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 16:55:25.867 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 5.6642ms
+2023-04-02 16:55:25.874 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 16:55:25.874 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 16:55:25.875 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 0.3589ms
+2023-04-02 16:55:25.880 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 5.6702ms
+2023-04-02 16:55:25.948 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 16:55:25.958 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 9.8447ms
+2023-04-02 17:00:34.031 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 17:00:34.423 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 17:00:34.425 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 17:00:34.425 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 17:00:34.425 -03:00 [INF] Hosting environment: Development
+2023-04-02 17:00:34.425 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 17:00:34.865 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 17:00:34.990 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 17:00:34.990 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 17:00:34.990 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 127.9573ms
+2023-04-02 17:00:34.992 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.0312ms
+2023-04-02 17:00:34.999 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.9826ms
+2023-04-02 17:00:35.072 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 17:00:35.143 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 70.5289ms
+2023-04-02 17:00:37.840 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 17:00:37.847 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 7.3052ms
+2023-04-02 17:00:37.856 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 17:00:37.856 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 17:00:37.856 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 0.2934ms
+2023-04-02 17:00:37.860 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 4.6880ms
+2023-04-02 17:00:37.929 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 17:00:37.936 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.4535ms
+2023-04-02 17:00:41.461 -03:00 [INF] Application is shutting down...
+2023-04-02 17:00:42.940 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 17:00:43.330 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 17:00:43.331 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 17:00:43.331 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 17:00:43.331 -03:00 [INF] Hosting environment: Development
+2023-04-02 17:00:43.331 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 17:00:43.972 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 17:00:44.086 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 17:00:44.086 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 17:00:44.086 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 115.9998ms
+2023-04-02 17:00:44.088 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.8202ms
+2023-04-02 17:00:44.097 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.5948ms
+2023-04-02 17:00:44.168 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 17:00:44.242 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 74.1219ms
+2023-04-02 17:00:46.987 -03:00 [INF] Application is shutting down...
+2023-04-02 17:05:58.132 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-02 17:05:58.374 -03:00 [DBG] Hosting starting
+2023-04-02 17:05:58.486 -03:00 [DBG] Using development certificate: CN=localhost (Thumbprint: DBF4B5C4064A45A62BC6B8824C11063FAF204518)
+2023-04-02 17:05:58.513 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-02 17:05:58.513 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-02 17:05:58.513 -03:00 [DBG] Loaded hosting startup assembly Ellen_Falpus_CadCategoria
+2023-04-02 17:05:58.514 -03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-04-02 17:05:58.514 -03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-04-02 17:05:58.514 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-02 17:05:58.514 -03:00 [INF] Hosting environment: Development
+2023-04-02 17:05:58.514 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-02 17:05:58.514 -03:00 [DBG] Hosting started
+2023-04-02 17:05:58.961 -03:00 [DBG] Connection id "0HMPJMMMHQOFF" accepted.
+2023-04-02 17:05:58.961 -03:00 [DBG] Connection id "0HMPJMMMHQOFE" accepted.
+2023-04-02 17:05:58.961 -03:00 [DBG] Connection id "0HMPJMMMHQOFF" started.
+2023-04-02 17:05:58.961 -03:00 [DBG] Connection id "0HMPJMMMHQOFE" started.
+2023-04-02 17:05:58.965 -03:00 [DBG] Connection id "0HMPJMMMHQOFF" received FIN.
+2023-04-02 17:05:58.965 -03:00 [DBG] Connection id "0HMPJMMMHQOFE" received FIN.
+2023-04-02 17:05:58.973 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 17:05:58.973 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 17:05:58.977 -03:00 [DBG] Connection id "0HMPJMMMHQOFE" stopped.
+2023-04-02 17:05:58.977 -03:00 [DBG] Connection id "0HMPJMMMHQOFF" stopped.
+2023-04-02 17:05:58.978 -03:00 [DBG] Connection id "0HMPJMMMHQOFF" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 17:05:58.978 -03:00 [DBG] Connection id "0HMPJMMMHQOFE" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 17:05:58.996 -03:00 [DBG] Connection id "0HMPJMMMHQOFG" accepted.
+2023-04-02 17:05:58.996 -03:00 [DBG] Connection id "0HMPJMMMHQOFG" started.
+2023-04-02 17:05:59.026 -03:00 [DBG] Connection "0HMPJMMMHQOFG" established using the following protocol: "Tls12"
+2023-04-02 17:05:59.050 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-02 17:05:59.063 -03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-04-02 17:05:59.118 -03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-04-02 17:05:59.164 -03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2023-04-02 17:05:59.165 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-02 17:05:59.165 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-02 17:05:59.166 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 117.6554ms
+2023-04-02 17:05:59.167 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.4175ms
+2023-04-02 17:05:59.183 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.3838ms
+2023-04-02 17:05:59.259 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-02 17:05:59.332 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 72.9325ms
+2023-04-02 17:06:26.608 -03:00 [DBG] Connection id "0HMPJMMMHQOFH" accepted.
+2023-04-02 17:06:26.608 -03:00 [DBG] Connection id "0HMPJMMMHQOFH" started.
+2023-04-02 17:06:26.610 -03:00 [DBG] Connection id "0HMPJMMMHQOFI" accepted.
+2023-04-02 17:06:26.610 -03:00 [DBG] Connection id "0HMPJMMMHQOFI" started.
+2023-04-02 17:06:26.610 -03:00 [DBG] Connection id "0HMPJMMMHQOFH" received FIN.
+2023-04-02 17:06:26.610 -03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|182_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-04-02 17:06:26.610 -03:00 [DBG] Connection id "0HMPJMMMHQOFH" stopped.
+2023-04-02 17:06:26.610 -03:00 [DBG] Connection id "0HMPJMMMHQOFH" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-04-02 17:06:26.613 -03:00 [DBG] Connection "0HMPJMMMHQOFI" established using the following protocol: "Tls12"
+2023-04-02 17:06:26.616 -03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/Categoria application/json 38
+2023-04-02 17:06:26.618 -03:00 [DBG] POST requests are not supported
+2023-04-02 17:06:26.641 -03:00 [DBG] 1 candidate(s) found for the request path '/Categoria'
+2023-04-02 17:06:26.645 -03:00 [DBG] Endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria)' with route pattern 'Categoria' is valid for the request path '/Categoria'
+2023-04-02 17:06:26.645 -03:00 [DBG] Request matched endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria)'
+2023-04-02 17:06:26.646 -03:00 [INF] Executing endpoint 'Ellen_Falpus_CadCategoria.Controller.CategoriaController.AdicionaCategoria (Ellen_Falpus_CadCategoria)'
+2023-04-02 17:06:26.651 -03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-04-02 17:06:26.667 -03:00 [INF] Route matched with {action = "AdicionaCategoria", controller = "Categoria"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AdicionaCategoria(Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto) on controller Ellen_Falpus_CadCategoria.Controller.CategoriaController (Ellen_Falpus_CadCategoria).
+2023-04-02 17:06:26.668 -03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-04-02 17:06:26.668 -03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-04-02 17:06:26.668 -03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-04-02 17:06:26.668 -03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-04-02 17:06:26.668 -03:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2023-04-02 17:06:26.668 -03:00 [DBG] Executing controller factory for controller Ellen_Falpus_CadCategoria.Controller.CategoriaController (Ellen_Falpus_CadCategoria)
+2023-04-02 17:06:26.733 -03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-04-02 17:06:26.847 -03:00 [DBG] Executed controller factory for controller Ellen_Falpus_CadCategoria.Controller.CategoriaController (Ellen_Falpus_CadCategoria)
+2023-04-02 17:06:26.850 -03:00 [DBG] Attempting to bind parameter 'categoriaDto' of type 'Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto' ...
+2023-04-02 17:06:26.851 -03:00 [DBG] Attempting to bind parameter 'categoriaDto' of type 'Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto' using the name '' in request data ...
+2023-04-02 17:06:26.851 -03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2023-04-02 17:06:26.853 -03:00 [DBG] Connection id "0HMPJMMMHQOFI", Request id "0HMPJMMMHQOFI:00000002": started reading request body.
+2023-04-02 17:06:26.853 -03:00 [DBG] Connection id "0HMPJMMMHQOFI", Request id "0HMPJMMMHQOFI:00000002": done reading request body.
+2023-04-02 17:06:26.854 -03:00 [DBG] JSON input formatter succeeded, deserializing to type 'Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto'
+2023-04-02 17:06:26.854 -03:00 [DBG] Done attempting to bind parameter 'categoriaDto' of type 'Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto'.
+2023-04-02 17:06:26.854 -03:00 [DBG] Done attempting to bind parameter 'categoriaDto' of type 'Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto'.
+2023-04-02 17:06:26.854 -03:00 [DBG] Attempting to validate the bound parameter 'categoriaDto' of type 'Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto' ...
+2023-04-02 17:06:26.860 -03:00 [DBG] Done attempting to validate the bound parameter 'categoriaDto' of type 'Ellen_Falpus_CadCategoria.Data.Dtos.CreateCategoriaDto'.
+2023-04-02 17:06:26.862 -03:00 [INF]  -----> Requisição de inclusão de uma nova categoria <----- 
+2023-04-02 17:06:27.376 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'EcommerceDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-02 17:06:27.402 -03:00 [DBG] Compiling query expression: 
+'DbSet<Categoria>()
+    .FirstOrDefault(cat => cat.Nome.ToLower() == __ToLower_0)'
+2023-04-02 17:06:27.540 -03:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Categoria>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Categoria.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Categoria.DataAlteracao (DateTime) Required, 1], [Property: Categoria.DataCriacao (DateTime) Required, 2], [Property: Categoria.Nome (string) Required MaxLength(50), 3], [Property: Categoria.Status (bool) Required, 4], }
+        SELECT TOP(1) c.Id, c.DataAlteracao, c.DataCriacao, c.Nome, c.Status
+        FROM Categorias AS c
+        WHERE LOWER(c.Nome) == @__ToLower_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Categoria>, 
+    Ellen_Falpus_CadCategoria.Data.EcommerceDbContext, 
+    False, 
+    False
+)
+    .SingleOrDefault()'
+2023-04-02 17:06:27.566 -03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-04-02 17:06:27.579 -03:00 [DBG] Created DbCommand for 'ExecuteReader' (6ms).
+2023-04-02 17:06:27.587 -03:00 [DBG] Opening connection to database 'categoriaDb' on server 'localhost'.
+2023-04-02 17:06:27.729 -03:00 [DBG] Opened connection to database 'categoriaDb' on server 'localhost'.
+2023-04-02 17:06:27.735 -03:00 [DBG] Executing DbCommand [Parameters=[@__ToLower_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE LOWER(`c`.`Nome`) = @__ToLower_0
+LIMIT 1
+2023-04-02 17:06:27.744 -03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__ToLower_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`DataAlteracao`, `c`.`DataCriacao`, `c`.`Nome`, `c`.`Status`
+FROM `Categorias` AS `c`
+WHERE LOWER(`c`.`Nome`) = @__ToLower_0
+LIMIT 1
+2023-04-02 17:06:27.766 -03:00 [DBG] Context 'EcommerceDbContext' started tracking 'Categoria' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-04-02 17:06:27.789 -03:00 [DBG] A data reader was disposed.
+2023-04-02 17:06:27.790 -03:00 [DBG] Closing connection to database 'categoriaDb' on server 'localhost'.
+2023-04-02 17:06:27.793 -03:00 [DBG] Closed connection to database 'categoriaDb' on server 'localhost'.
+2023-04-02 17:06:27.793 -03:00 [ERR]  ****** Falha na inclusão da nova categoria ****** 
+2023-04-02 17:06:27.794 -03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2023-04-02 17:06:27.795 -03:00 [DBG] No information found on request to perform content negotiation.
+2023-04-02 17:06:27.795 -03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.

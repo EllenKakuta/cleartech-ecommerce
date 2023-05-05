@@ -1,0 +1,53 @@
+2023-04-06 10:24:54.038 -03:00 [INF] 
+ -------------------
+|   Iniciando API   |
+ ------------------- 
+2023-04-06 10:24:54.762 -03:00 [INF] Now listening on: https://localhost:5001
+2023-04-06 10:24:54.765 -03:00 [INF] Now listening on: http://localhost:5000
+2023-04-06 10:24:54.765 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-06 10:24:54.765 -03:00 [INF] Hosting environment: Development
+2023-04-06 10:24:54.765 -03:00 [INF] Content root path: C:\Users\Cleartech\T2-EllenMarcelle\E-Commerce\E-Commerce\Sprint 13 - Implementação de Logs\Ellen_Falpus_CadCategoria\Ellen_Falpus_CadCategoria
+2023-04-06 10:24:55.133 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2023-04-06 10:24:55.350 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - -
+2023-04-06 10:24:55.352 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 222.5810ms
+2023-04-06 10:24:55.355 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 5.2357ms
+2023-04-06 10:24:55.360 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - -
+2023-04-06 10:24:55.378 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.4123ms
+2023-04-06 10:24:55.451 -03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2023-04-06 10:24:55.558 -03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 107.0169ms
+2023-04-06 10:24:59.426 -03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/CarrinhoDeCompras/remover application/json 69
+2023-04-06 10:24:59.462 -03:00 [INF] Executing endpoint 'Ellen_Falpus_CadCategoria.Controller.CarrinhoDeComprasController.RemoveProduto (Ellen_Falpus_CadCategoria)'
+2023-04-06 10:24:59.493 -03:00 [INF] Route matched with {action = "RemoveProduto", controller = "CarrinhoDeCompras"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult RemoveProduto(Ellen_Falpus_CadCategoria.Data.Dtos.ProdutoDoCarrinhoDto.CreateProdutoDoCarrinhoDto) on controller Ellen_Falpus_CadCategoria.Controller.CarrinhoDeComprasController (Ellen_Falpus_CadCategoria).
+2023-04-06 10:25:00.631 -03:00 [INF] Entity Framework Core 5.0.17 initialized 'EcommerceDbContext' using provider 'MySql.EntityFrameworkCore' with options: using lazy-loading proxies 
+2023-04-06 10:25:01.296 -03:00 [INF] Executed DbCommand (33ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Bairro`, `c`.`CEP`, `c`.`Complemento`, `c`.`Localidade`, `c`.`Logradouro`, `c`.`Numero`, `c`.`QuantidadeTotalProdutos`, `c`.`UF`, `c`.`ValorTotal`
+FROM `CarrinhoDeCompras` AS `c`
+WHERE `c`.`Id` = @__id_0
+LIMIT 1
+2023-04-06 10:25:01.357 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`Altura`, `p`.`CategoriaId`, `p`.`CentroId`, `p`.`Comprimento`, `p`.`DataAlteracao`, `p`.`DataCriacao`, `p`.`Descricao`, `p`.`Estoque`, `p`.`Largura`, `p`.`Nome`, `p`.`Peso`, `p`.`Status`, `p`.`SubcategoriaId`, `p`.`Valor`
+FROM `Produtos` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-04-06 10:25:01.402 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__dto_IdCarrinho_0='?' (DbType = Int32), @__dto_IdProduto_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`IdCarrinho`, `p`.`IdProduto`, `p`.`NomeProduto`, `p`.`QuantidadeProduto`, `p`.`ValorUnitario`
+FROM `ProdutoDoCarrinho` AS `p`
+WHERE (`p`.`IdCarrinho` = @__dto_IdCarrinho_0) AND (`p`.`IdProduto` = @__dto_IdProduto_1)
+LIMIT 1
+2023-04-06 10:25:01.426 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT `p`.`Id`, `p`.`IdCarrinho`, `p`.`IdProduto`, `p`.`NomeProduto`, `p`.`QuantidadeProduto`, `p`.`ValorUnitario`
+FROM `ProdutoDoCarrinho` AS `p`
+WHERE `p`.`Id` = @__id_0
+LIMIT 1
+2023-04-06 10:25:01.535 -03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+UPDATE `CarrinhoDeCompras` SET `QuantidadeTotalProdutos` = @p0, `ValorTotal` = @p1
+WHERE `Id` = @p2;
+SELECT ROW_COUNT();
+2023-04-06 10:25:01.538 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM `ProdutoDoCarrinho`
+WHERE `Id` = @p0;
+SELECT ROW_COUNT();
+2023-04-06 10:25:01.558 -03:00 [INF] Executing OkObjectResult, writing value of type 'Castle.Proxies.ProdutoDoCarrinhoProxy'.
+2023-04-06 10:25:01.574 -03:00 [INF] Executed action Ellen_Falpus_CadCategoria.Controller.CarrinhoDeComprasController.RemoveProduto (Ellen_Falpus_CadCategoria) in 2076.9871ms
+2023-04-06 10:25:01.574 -03:00 [INF] Executed endpoint 'Ellen_Falpus_CadCategoria.Controller.CarrinhoDeComprasController.RemoveProduto (Ellen_Falpus_CadCategoria)'
+2023-04-06 10:25:01.577 -03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:5001/CarrinhoDeCompras/remover application/json 69 - 200 - application/json;+charset=utf-8 2150.7415ms
